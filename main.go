@@ -4,19 +4,18 @@ import (
 	"path"
 	"sync"
 
+	"github.com/JohannWeging/logerr"
 	"github.com/luzifer/rconfig"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/yoo/avrmqtt/avr"
-	"github.com/yoo/avrmqtt/mqtt"
+	"github.com/JohannWeging/avrmqtt/avr"
+	"github.com/JohannWeging/avrmqtt/mqtt"
 )
 
 var logLock sync.Mutex
 var conf = struct {
-	AVRHost              string `flag:"avr-host" default:"avr" description:"denon avr host name"`
-	AVRHTTPPort          string `flag:"avr-http-port" env:"AVR_HTTP_PORT" default:"80" description:"denon avr telnet port"`
-	AVRTelnetPort        string `flag:"avr-telnet-port" default:"23" description:"denon avr telnet port"`
-	AVRTelnetCmdInterval int    `flag:"avr-telnet-cmd-interval" default:"100" description:"time to wait between telnet commands in milliseconds"`
+	AVRHost       string `flag:"avr-host" default:"avr" description:"denon avr host name"`
+	AVRTelnetPort string `flag:"avr-telnet-port" default:"23" description:"denon avr telnet port"`
 
 	MQTTBroker   string `flag:"mqtt-broker" description:"mqtt host name"`
 	MQTTUser     string `flag:"mqtt-user" description:"mqtt user name"`
@@ -42,10 +41,8 @@ func main() {
 	log.SetLevel(lvl)
 
 	avrOpts := &avr.Options{
-		Host:              conf.AVRHost,
-		HttpPort:          conf.AVRHTTPPort,
-		TelnetPort:        conf.AVRTelnetPort,
-		TelnetCmdInterval: conf.AVRTelnetCmdInterval,
+		Host:       conf.AVRHost,
+		TelnetPort: conf.AVRTelnetPort,
 	}
 
 	receiver := avr.New(avrOpts)
@@ -60,7 +57,8 @@ func main() {
 	}
 	broker, err := mqtt.New(mqttOpts)
 	if err != nil {
-		log.WithError(err).Fatal("failed to connect to mqtt broker")
+		f := logerr.GetFields(err)
+		log.WithFields(f).WithError(err).Fatal("failed to connect to mqtt broker")
 	}
 	run(receiver, broker)
 }
@@ -94,5 +92,6 @@ func errLog(err error, msg string) {
 	}
 	logLock.Lock()
 	defer logLock.Unlock()
-	log.WithError(err).Error(msg)
+	fields := logerr.GetFields(err)
+	log.WithFields(fields).WithError(err).Error(msg)
 }
