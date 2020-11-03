@@ -4,12 +4,12 @@ import (
 	"path"
 	"sync"
 
-	"github.com/JohannWeging/logerr"
+	"github.com/yoo/logerr"
 	"github.com/luzifer/rconfig"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/JohannWeging/avrmqtt/avr"
-	"github.com/JohannWeging/avrmqtt/mqtt"
+	"github.com/yoo/avrmqtt/avr"
+	"github.com/yoo/avrmqtt/mqtt"
 )
 
 var logLock sync.Mutex

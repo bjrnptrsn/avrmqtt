@@ -1,3 +1,5 @@
+github.com/JohannWeging/logerr v0.0.0-20181001150856-5e4972caecf8 h1:HfSj4vnm/ZGR2tTW3XWs5guZZgLXZu5cXgtEgPwXnbQ=
+github.com/JohannWeging/logerr v0.0.0-20181001150856-5e4972caecf8/go.mod h1:uz6NZPqEPt+ZMpkDXfY195cFrtAF97CpdFMBnm7R1Aw=
 github.com/Luzifer/rconfig v2.2.0+incompatible h1:Kle3+rshPM7LxciOheaR4EfHUzibkDDGws04sefQ5m8=
 github.com/Luzifer/rconfig v2.2.0+incompatible/go.mod h1:9pet6z2+mm/UAB0jF/rf0s62USfHNolzgR6Q4KpsJI0=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
@@ -10,6 +12,8 @@ github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/hpcloud/tail v1.0.0 h1:nfCOvKYfkgYP8hkirhJocXT2+zOD8yUNjXaWfTlyFKI=
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
+github.com/juju/errors v0.0.0-20200330140219-3fe23663418f h1:MCOvExGLpaSIzLYB4iQXEHP4jYVU6vmzLNQPdMVrxnM=
+github.com/juju/errors v0.0.0-20200330140219-3fe23663418f/go.mod h1:W54LbzXuIE0boCoNJfwqpmkKJ1O4TCTZMetAt6jGk7Q=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1 h1:mweAR1A6xJ3oS2pRaGiHgQ4OO8tzTaLawm8vnODuwDk=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/konsorten/go-windows-terminal-sequences v1.0.2 h1:DB17ag19krx9CFsz4o3enTrPXyIXCl+2iCXH/aMAp9s=
@@ -30,6 +34,8 @@ github.com/spf13/pflag v1.0.5/go.mod h1:McXfInJRrz4CZXVZOBLb0bTZqETkiAhM9Iw0y3An
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.2.2 h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
+github.com/yoo/logerr v0.0.0-20181001150856-5e4972caecf8 h1:nmWULHpp/uziTQgkjwbTx3MNHL/UMpfaIW0J0tDBLk0=
+github.com/yoo/logerr v0.0.0-20181001150856-5e4972caecf8/go.mod h1:h0KfYFI2w0VCXBNFnYwHmh2TUDLrh/G9B1nn/xRLL7A=
 github.com/ziutek/telnet v0.0.0-20180329124119-c3b780dc415b h1:VfPXB/wCGGt590QhD1bOpv2J/AmC/RJNTg/Q59HKSB0=
 github.com/ziutek/telnet v0.0.0-20180329124119-c3b780dc415b/go.mod h1:IZpXDfkJ6tWD3PhBK5YzgQT+xJWh7OsdwiG8hA2MkO4=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
